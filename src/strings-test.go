@@ -61,4 +61,46 @@ func main() {
 
 	fmt.Printf("%s小写=%s \n", str6, strings.ToLower(str6))
 	fmt.Printf("%s大写=%s \n", str6, strings.ToUpper(str6))
+
+	// Trim 裁剪字符串开头或者结尾的字符，也就是不匹配中间的字符
+	// GoLang
+	fmt.Printf("%q\n", strings.Trim(" !!! GoLang !!! ", "! "))
+	// GoLang
+	fmt.Printf("%q\n", strings.Trim(" !!! GoLang !!! ", " ! "))
+	//  !!! GoLang !!!
+	fmt.Printf("%q\n", strings.Trim(" !!! GoLang !!! ", "!"))
+
+	// GoLang !!!   TrimLeft 修改字符串开头的字符
+	fmt.Printf("%q\n", strings.TrimLeft(" !!! GoLang !!! ", " ! "))
+	//  !!! GoLang !!!
+	fmt.Printf("%q\n", strings.TrimLeft(" !!! GoLang !!! ", "!"))
+
+	//  !!! GoLang   TrimRight 修改字符串结尾的字符
+	fmt.Printf("%q\n", strings.TrimRight(" !!! GoLang !!! ", " ! "))
+	//  !!! GoLang !!!
+	fmt.Printf("%q\n", strings.TrimRight(" !!! GoLang !!! ", "!"))
+
+	// GoLang
+	fmt.Printf("%q\n", strings.TrimSpace(" \t\n GoLang \t\n\r\n "))
+
+	// 天是几号
+	fmt.Printf("%q\n", strings.Trim("今天是几号", "今"))
+	// 今天是几号
+	fmt.Printf("%q\n", strings.Trim("今天是几号", "天"))
+	// 气不错，我   今天会被拆分成2个字符分别匹配裁剪
+	fmt.Printf("%q\n", strings.Trim("今天天气不错，我天", "今天"))
+
+	// ["one" "two" "three" "four" "five"]
+	fmt.Printf("%q\n", strings.Split("one two three four five", " "))
+
+	str7 := "one two three four five 你好"
+	array := strings.Fields(str7) // 按空格分割
+
+	str8 := strings.Join(array, ";")
+	fmt.Printf("str8=%s \n", str8)
+
+	for i, val := range array {
+		fmt.Printf("index=%d,val=%s \n", i, val)
+	}
+
 }
