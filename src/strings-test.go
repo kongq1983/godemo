@@ -103,4 +103,12 @@ func main() {
 		fmt.Printf("index=%d,val=%s \n", i, val)
 	}
 
+	num9 := 1000
+
+	fmt.Printf("num9 二进制=%b \n", num9)
+	fmt.Printf("num9 八进制=%o \n", num9)
+	fmt.Printf("num9 十进制=%d \n", num9)
+	fmt.Printf("num9 小写十六进制=%x \n", num9)
+	fmt.Printf("num9 大写十六进制=%X \n", num9)
+
 }
